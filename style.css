@@ -1,50 +1,48 @@
+@font-face {
+  font-family: Mabry Pro;
+  src: url("fonts/MabryPro_Medium/MabryPro_Medium.eot");
+  src: local("MabryPro_Medium"), local("fonts/MabryPro_Medium/MabryPro_Medium"), url("fonts/MabryPro_Medium/MabryPro_Medium.eot?#iefix") format("embedded-opentype"), url("fonts/MabryPro_Medium/MabryPro_Medium.woff") format("woff"), url("fonts/MabryPro_Medium/MabryPro_Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Mabry Pro;
+  src: url("fonts/MabryPro_Regular/MabryPro_Regular.eot");
+  src: local("MabryPro_Regular"), local("fonts/MabryPro_Regular/MabryPro_Regular"), url("fonts/MabryPro_Regular/MabryPro_Regular.eot?#iefix") format("embedded-opentype"), url("fonts/MabryPro_Regular/MabryPro_Regular.woff") format("woff"), url("fonts/MabryPro_Regular/MabryPro_Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 .wrapper-colored {
   background-color: #000000;
 }
 
 .form * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
-
 .form__row {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   row-gap: 40px;
 }
-
 .form__item {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 33.333%;
-          flex: 0 1 33.333%;
+  flex: 0 1 33.333%;
   padding: 0 15px;
 }
-
 @media (max-width: 1200px) {
   .form__item {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 50%;
-            flex: 1 1 50%;
+    flex: 1 1 50%;
   }
 }
-
 @media (max-width: 900px) {
   .form__item {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 100%;
-            flex: 1 1 100%;
+    flex: 1 1 100%;
   }
 }
-
 .form__item--button {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 100%;
-          flex: 1 1 100%;
+  flex: 1 1 100%;
 }
-
 .form__lebel {
   color: #FFF;
   font-size: 32px;
@@ -54,8 +52,8 @@
   letter-spacing: -0.64px;
   margin-bottom: 16px;
   display: block;
+  font-family: Mabry Pro;
 }
-
 .form__input {
   border-radius: 12px;
   background: #2B2B2B;
@@ -73,8 +71,8 @@
   margin-bottom: 16px;
   display: block;
   padding: 0 15px;
+  font-family: Mabry Pro;
 }
-
 .form__button {
   cursor: pointer;
   padding: 40px;
@@ -85,11 +83,11 @@
   font-size: 40px;
   font-style: normal;
   font-weight: 500;
-  line-height: 40px;
-  /* 100% */
+  line-height: 40px; /* 100% */
   letter-spacing: -0.8px;
   width: 100%;
   text-align: center;
+  font-family: Mabry Pro;
 }
 
 .thankyou-popup {
@@ -98,16 +96,13 @@
   left: 0;
   width: 100%;
   height: 100%;
-  -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   opacity: 0;
 }
-
 .thankyou-popup.js-active {
   top: 0;
   opacity: 1;
 }
-
 .thankyou-popup__back {
   position: absolute;
   top: 0;
@@ -117,7 +112,6 @@
   background-color: #000000;
   opacity: 0.5;
 }
-
 .thankyou-popup__container {
   position: absolute;
   top: 50%;
@@ -125,21 +119,13 @@
   width: 800px;
   max-width: 100%;
   min-height: 400px;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   background-color: #ffffff;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   border-radius: 24px;
 }
-
 .thankyou-popup__close {
   position: absolute;
   top: 20px;
@@ -147,7 +133,6 @@
   width: 50px;
   height: 50px;
 }
-
 .thankyou-popup__close span {
   display: block;
   position: absolute;
@@ -157,17 +142,12 @@
   height: 2px;
   background-color: #FF522D;
 }
-
 .thankyou-popup__close span:first-child {
-  -webkit-transform: translate(-50%, -50%) rotate(45deg);
-          transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
 }
-
 .thankyou-popup__close span:last-child {
-  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
-          transform: translate(-50%, -50%) rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
-
 .thankyou-popup__title {
   text-align: center;
   color: #FF522D;
@@ -175,7 +155,5 @@
   font-size: 56px;
   font-style: normal;
   font-weight: 400;
-  line-height: 56px;
-  /* 100% */
-}
-/*# sourceMappingURL=style.css.map */
+  line-height: 56px; /* 100% */
+}/*# sourceMappingURL=style.css.map */
