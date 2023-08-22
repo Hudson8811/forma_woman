@@ -1,3 +1,27 @@
+@font-face {
+	font-family: Mabry Pro;
+	src: url('fonts/MabryPro_Medium/MabryPro_Medium.eot');
+	src: local('MabryPro_Medium'), local('fonts/MabryPro_Medium/MabryPro_Medium'),
+		url('fonts/MabryPro_Medium/MabryPro_Medium.eot?#iefix') format('embedded-opentype'),
+		url('fonts/MabryPro_Medium/MabryPro_Medium.woff') format('woff'),
+		url('fonts/MabryPro_Medium/MabryPro_Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: Mabry Pro;
+	src: url('fonts/MabryPro_Regular/MabryPro_Regular.eot');
+	src: local('MabryPro_Regular'), local('fonts/MabryPro_Regular/MabryPro_Regular'),
+		url('fonts/MabryPro_Regular/MabryPro_Regular.eot?#iefix') format('embedded-opentype'),
+		url('fonts/MabryPro_Regular/MabryPro_Regular.woff') format('woff'),
+		url('fonts/MabryPro_Regular/MabryPro_Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+
 .wrapper-colored {
 	background-color: #000000;
 }
@@ -32,6 +56,7 @@
 		letter-spacing: -0.64px;
 		margin-bottom: 16px;
 		display: block;
+		font-family: Mabry Pro;
 	}
 	&__input {
 		border-radius: 12px;
@@ -50,6 +75,7 @@
 		margin-bottom: 16px;
 		display: block;
 		padding: 0 15px;
+		font-family: Mabry Pro;
 	}
 	&__button {
 		cursor: pointer;
@@ -65,6 +91,7 @@
 		letter-spacing: -0.8px;
 		width: 100%;
 		text-align: center;
+		font-family: Mabry Pro;
 	}
 }
 
