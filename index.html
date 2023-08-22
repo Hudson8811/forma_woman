@@ -8,46 +8,46 @@
 </head>
 <body>
 	<div class="wrapper-colored">
-		<form action="" class="form">
+		<form action="/save_data/" class="form" id="saveDataForm">
 			<div class="form__row">
 				<div class="form__item">
 					<label for="form__input1" class="form__lebel">ФИО</label>
-					<input type="text" class="form__input" id="form__input1">
+					<input type="text" class="form__input" id="form__input1" name="name" required>
 				</div>
 				<div class="form__item">
 					<label for="form__input2" class="form__lebel">Телефон</label>
-					<input type="tel" class="form__input" id="form__input2">
+					<input type="tel" class="form__input" id="form__input2" name="phone" required>
 				</div>
 				<div class="form__item">
 					<label for="form__input3" class="form__lebel">E-mail</label>
-					<input type="email" class="form__input" id="form__input3">
+					<input type="email" class="form__input" id="form__input3" name="email" required>
 				</div>
 				<div class="form__item">
 					<label for="form__input4" class="form__lebel">Название проекта</label>
-					<input type="text" class="form__input" id="form__input4">
+					<input type="text" class="form__input" id="form__input4" name="project_name">
 				</div>
 				<div class="form__item">
 					<label for="form__input5" class="form__lebel">Сайт проекта</label>
-					<input type="text" class="form__input" id="form__input5">
+					<input type="text" class="form__input" id="form__input5" name="project_site">
 				</div>
 				<div class="form__item">
 					<label for="form__input6" class="form__lebel">География присутствия</label>
-					<input type="text" class="form__input" id="form__input6">
+					<input type="text" class="form__input" id="form__input6" name="geography">
 				</div>
 				<div class="form__item">
 					<label for="form__input7" class="form__lebel">Стадия проекта</label>
-					<input type="text" class="form__input" id="form__input7">
+					<input type="text" class="form__input" id="form__input7" name="project_stage">
 				</div>
 				<div class="form__item">
 					<label for="form__input8" class="form__lebel">Описание проекта</label>
-					<input type="text" class="form__input" id="form__input8">
+					<input type="text" class="form__input" id="form__input8" name="project_desc">
 				</div>
 				<div class="form__item">
 					<label for="form__input9" class="form__lebel">Презентация проекта</label>
-					<input type="text" class="form__input" id="form__input9">
+					<input type="text" class="form__input" id="form__input9" name="project_presentation">
 				</div>
 				<div class="form__item form__item--button">
-					<div class="form__button js-btn-submit">Отправить заявку</div>
+					<button type="submit" class="form__button">Отправить заявку</button>
 				</div>
 			</div>
 		</form>
