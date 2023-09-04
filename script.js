@@ -2,10 +2,12 @@ const thankyou_popup = document.querySelector('.thankyou-popup');
 const thankyou_popup_back = document.querySelector('.thankyou-popup__back');
 const thankyoupopup_close = document.querySelector('.thankyou-popup__close');
 const thankyoupopup_title = document.querySelector('.thankyou-popup__title');
+const errorBlock = document.querySelector('.error-block');
 const saveDataForm = document.getElementById('saveDataForm');
 
 document.addEventListener('DOMContentLoaded', function() {
     if (saveDataForm) {
+
         saveDataForm.addEventListener('submit', function(event) {
             event.preventDefault();
             const formData = new FormData(saveDataForm);
@@ -14,17 +16,21 @@ document.addEventListener('DOMContentLoaded', function() {
             xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
             xhr.onload = function() {
                 if (xhr.status === 200) {
-                    thankyoupopup_title.innerHTML = 'Спасибо за вашу заявку!';
-                    thankyou_popup.classList.add('js-active');
+                    const response = JSON.parse(xhr.responseText);
+                    if (response.hasOwnProperty('error') && response.error !== '') {
+                        errorBlock.innerHTML = response.error;
+                    } else {
+                        errorBlock.innerHTML = '';
+                        thankyoupopup_title.innerHTML = 'Спасибо за вашу заявку!';
+                        thankyou_popup.classList.add('js-active');
+                    }
                 } else {
-                    thankyoupopup_title.innerHTML = 'Ошибка.<br>Что-то пошло не так. Попробуйте позже.';
-                    thankyou_popup.classList.add('js-active');
+                    errorBlock.innerHTML = 'Ошибка. Что-то пошло не так. Попробуйте позже.';
                     console.error('Ошибка: ' + xhr.status);
                 }
             };
             xhr.onerror = function() {
-                thankyoupopup_title.innerHTML = 'Ошибка.<br>Что-то пошло не так. Попробуйте позже.';
-                thankyou_popup.classList.add('js-active');
+                errorBlock.innerHTML = 'Ошибка. Что-то пошло не так. Попробуйте позже.';
                 console.error('Произошла ошибка при отправке запроса.');
             };
             xhr.send(formData);
